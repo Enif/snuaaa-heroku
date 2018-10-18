@@ -25,7 +25,7 @@ var mongoose = require('mongoose');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use('/', _express2.default.static(__dirname + '/build'));
+app.use('/', _express2.default.static(__dirname));
 
 // [TODO] SET CORS OPTIONS AFTER PUBLISHING
 app.use((0, _cors2.default)());

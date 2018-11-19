@@ -40,6 +40,10 @@ var _album = require('./album');
 
 var _album2 = _interopRequireDefault(_album);
 
+var _soundbox = require('./soundbox');
+
+var _soundbox2 = _interopRequireDefault(_soundbox);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var router = _express2.default.Router();
@@ -52,5 +56,6 @@ router.use('/board', _board2.default);
 router.use('/photoboard', _photoboard2.default);
 router.use('/post', _post2.default);
 router.use('/album', _album2.default);
+router.use('/soundbox', _soundbox2.default);
 
 exports.default = router;

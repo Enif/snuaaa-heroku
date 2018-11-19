@@ -89,7 +89,9 @@ router.post('/', upload.single('profile'), function (req, res) {
         });
 
         account.password = account.generateHash(account.password);
-        account.profilePath = '/upload/profile/' + account.id + "-" + req.file.originalname;
+        if (req.file) {
+            account.profilePath = '/upload/profile/' + account.id + "-" + req.file.originalname;
+        }
         // SAVE IN THE DATABASE
         account.save(function (err) {
             if (err) throw err;

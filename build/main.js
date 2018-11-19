@@ -25,6 +25,10 @@ var mongoose = require('mongoose');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+// for local test
+// app.use('/', express.static(__dirname + '/../../snuaaa-react/build'));
+
+// for heroku
 app.use('/', _express2.default.static(__dirname));
 
 // [TODO] SET CORS OPTIONS AFTER PUBLISHING
